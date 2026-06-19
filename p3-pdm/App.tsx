@@ -31,10 +31,34 @@ export default function App() {
 
     <View style={styles.container}>
 
-      
+      <StatusBar style="auto" />
 
+      <Pressable
+        style={styles.button}
+        onPress={buscarGatos}
+      >
+        <Text style={styles.buttonText}>
+          Buscar gatos
+        </Text>
+      </Pressable>
+
+      <FlatList
+        data={gatos}
+
+        renderItem={({item}) => (
+          <Image
+            source={{ uri: item.url }}
+            style={{
+              width:300,
+              height:300,
+              margin:10
+            }}
+          />
+        )}
+
+        keyExtractor={(item)=> item.id}
+      />
     </View>
-
   );
 }
 
@@ -45,5 +69,19 @@ const styles = StyleSheet.create({
     alignItems:'center',
     backgroundColor:'#494c4e'
   },
+
+
+  button:{
+    backgroundColor:'#007AFF',
+    padding:10,
+    margin:20,
+    borderRadius:5
+  },
+
+
+  buttonText:{
+    color:'white'
+  }
+
 
 });
