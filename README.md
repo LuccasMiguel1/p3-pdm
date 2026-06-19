@@ -1,4 +1,4 @@
-Atividade P2 para Programação para Dispositivos Móveis.
+Atividade P3 para Programação para Dispositivos Móveis.
 
 Nome: Luccas Miguel da Cruz dos Santos
 
