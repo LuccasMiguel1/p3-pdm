@@ -43,14 +43,14 @@ export default function App() {
       </Pressable>
 
       <FlatList
-        data={gatos}
+        data={gatos.slice(0, 5)}
 
         renderItem={({item}) => (
           <Image
             source={{ uri: item.url }}
             style={{
               width:300,
-              height:300,
+              height:200,
               margin:10
             }}
           />
